@@ -1,7 +1,10 @@
 # PyAI
 The future arrives, one step at a time.
+
 Running the agent
+
 Chat-only helper (default)
+
 Uses Gemma with the free Google API tier. No tools – just conversation and guidance.
 
 python main_gemma.py
@@ -18,7 +21,9 @@ Requirements:
 Create and activate a virtual environment, then install dependencies:
 
 python3 -m venv .venv
+
 source .venv/bin/activate  # on Windows: .venv\Scripts\activate
+
 pip install -e .
 
 ## Configuration
@@ -26,7 +31,7 @@ pip install -e .
 This project uses a `.env` file for secrets (API keys).
 
 1. Create a file named `.env` in the project root.
-2. Add your Google API key:
+3. Add your Google API key:
 
 GEMINI_API_KEY="your-key-here"
 
@@ -56,5 +61,7 @@ This is a toy agent. Be careful:
 ### Misc Config
 
 Non-secret settings (like maximum characters the AI can read) are defined in `config.py`.  
+
 Secrets such as API keys belong in `.env`, not in `config.py`.
+
 Paid models are more reccomended because they have lower rate limits andcan handle more data at once (Tokens)
