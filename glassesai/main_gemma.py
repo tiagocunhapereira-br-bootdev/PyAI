@@ -1,14 +1,17 @@
-import os
-import sys
-from dotenv import load_dotenv
-from google import genai
-from google.genai import types
-from prompts import system_prompt
-from call_function import available_functions
-
+# Make sure to have them imported!
+try:
+    import os
+    import sys
+    from dotenv import load_dotenv
+    from google import genai
+    from google.genai import types
+    from prompts import system_prompt
+    from call_function import available_functions
+except Exception:
+    raise Exception("Please download what needs to be imported!")
 load_dotenv()
 api_key = os.environ.get("GEMINI_API_KEY")
-if api_key is None:
+if len(api_key) < 1:
     raise RuntimeError(
         "Hey! You haven't set an API key! Try changing .env and putting your API key there!"
     )
