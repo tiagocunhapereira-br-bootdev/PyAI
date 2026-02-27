@@ -7,7 +7,7 @@ Chat-only helper (default)
 
 Uses Gemma with the free Google API tier. No tools – just conversation and guidance.
 
-python main_gemma.py
+uv run main_gemma.py
 
 
 ## Installation
@@ -39,7 +39,7 @@ GEMINI_API_KEY="your-key-here"
 
 The default entrypoint uses Gemma with the free tier:
 
-python main_gemma.py
+uv run main_gemma.py
 
 ## How it works
 
@@ -65,3 +65,5 @@ Non-secret settings (like maximum characters the AI can read) are defined in `co
 Secrets such as API keys belong in `.env`, not in `config.py`.
 
 Paid models are more reccomended because they have lower rate limits andcan handle more data at once (Tokens)
+
+You can give the model a system prompt by changing `prompts.py`.
