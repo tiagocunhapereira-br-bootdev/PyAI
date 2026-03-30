@@ -4,7 +4,7 @@ try:
     import sys
     from dotenv import load_dotenv
     from google import genai
-    from google.generativeai import types
+    from google.genai import types
     from prompts import system_prompt
     from call_function import available_functions
 except Exception:
